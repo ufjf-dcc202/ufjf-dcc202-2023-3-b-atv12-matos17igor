@@ -12,3 +12,5 @@ let estoque = {
 function getEstoque() {
     return estoque;
 }
+
+export {getEstoque};
