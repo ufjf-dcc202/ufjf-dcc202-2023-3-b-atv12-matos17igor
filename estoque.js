@@ -1,4 +1,4 @@
-const estoque = {
+let estoque = {
     'joao': [{
         tipo: 'maca',
         quantidade: 1
@@ -9,12 +9,14 @@ const estoque = {
     }]
 };
 
+limpaEstoque();
+
 function getEstoque() {
     return estoque;
 }
 
 function limpaEstoque() {
-    
+    estoque = {};
 }
 
 function transacaoNoEstoque() {
