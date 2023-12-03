@@ -13,4 +13,12 @@ function getEstoque() {
     return estoque;
 }
 
-export {getEstoque};
+function limpaEstoque() {
+    
+}
+
+function transacaoNoEstoque() {
+    
+}
+
+export {getEstoque, limpaEstoque, transacaoNoEstoque};
