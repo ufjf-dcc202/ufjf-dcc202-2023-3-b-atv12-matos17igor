@@ -1,12 +1,12 @@
-let estoque = {
-    'joao': {
-        'maca': 1,
-        'banana': 2
-    },
-    'maria': {
-        'maca': 2,
-        'pera': 3
-    }
+const estoque = {
+    'joao': [{
+        tipo: 'maca',
+        quantidade: 1
+    }],
+    'maria': [{
+        tipo: 'maca',
+        quantidade: 2
+    }]
 };
 
 function getEstoque() {
@@ -18,7 +18,7 @@ function limpaEstoque() {
 }
 
 function transacaoNoEstoque() {
-    
+
 }
 
 export {getEstoque, limpaEstoque, transacaoNoEstoque};
