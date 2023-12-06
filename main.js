@@ -24,3 +24,13 @@ function atualizaTela(){
     preencheLista(olMaria, estoque.maria);
 }
 
+function preencheLista(lista, estoqueDaPessoa){
+    const estoque = getEstoque();
+    lista.innerHTML = "";
+    for(let i = 0; i < estoqueDaPessoa.length; i++){
+        const monte = estoqueDaPessoa[i];
+        const li = document.createElement('li');
+        li.textContent = `${monte.tipo}: ${monte.qtd}`;
+        lista.append(li);
+    }
+}
