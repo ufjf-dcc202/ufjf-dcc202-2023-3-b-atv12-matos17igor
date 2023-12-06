@@ -13,6 +13,14 @@ function leFormulario(event) {
     const destino = document.entrada.destino.value;
 
     console.log(`${origem} doa ${quantidade} ${fruta} para ${destino}`);
+
+    transacaoNoEstoque(origem, destino, fruta, quantidade);
+    atualizaTela();
 }
 
+function atualizaTela(){
+    const estoque = getEstoque();
+    preencheLista(olJoao, estoque.joao);
+    preencheLista(olMaria, estoque.maria);
+}
 
