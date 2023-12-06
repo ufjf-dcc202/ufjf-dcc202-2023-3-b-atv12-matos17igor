@@ -15,6 +15,7 @@ function getEstoque() {
 
 function limpaEstoque() {
     estoque = {};
+    return limpaEstoque;
 }
 
 function transacaoNoEstoque() {
