@@ -68,4 +68,17 @@ function dePessoaParaPomar(origem, tipo, quantidade){
     }
 }
 
+function dePomarParaPessoa(destino, tipo, quantidade) {
+    const pessoa = estoque[destino];
+        for(let i = 0; i < pessoa.length; i++){
+            const monte = pessoa[i];
+            if(monte.tipo === tipo){
+                monte.qtd += Math.max(quantidade, 0);
+                return;
+            }
+        }
+        const novoMonte = {'tipo': tipo, 'qtd': Math.max(quantidade, 0)};
+        pessoa.push(novoMonte);
+}
+
 export {getEstoque, limpaEstoque, transacaoNoEstoque};
