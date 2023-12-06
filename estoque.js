@@ -57,4 +57,15 @@ function transacaoNoEstoque(origem, destino, tipo, quantidade) {
     monteOrigem.qtd -= qtdReal;
 }
 
+function dePessoaParaPomar(origem, tipo, quantidade){
+    const pessoa = estoque[origem];
+    for(let i = 0; i < pessoa.length; i++){
+        const monte = pessoa[i];
+        if(monte.tipo === tipo){
+            monte.qtd -= Math.min(quantidade, monte.qtd);
+            return;
+        }
+    }
+}
+
 export {getEstoque, limpaEstoque, transacaoNoEstoque};
