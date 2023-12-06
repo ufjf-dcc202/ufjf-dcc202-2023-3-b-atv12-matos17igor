@@ -1,18 +1,16 @@
 let estoque = {
-    'joao': [{
-        tipo: 'maca',
-        quantidade: 1
-    }],
-    'maria': [{
-        tipo: 'maca',
-        quantidade: 2
-    }]
+    'joao': [
+        {'tipo': 'maca', 'qtd': 1}
+    ],
+    'maria': [
+        {'tipo': 'maca', 'qtd': 2}
+    ]
 };
 
 limpaEstoque();
 
 function getEstoque() {
-    return estoque;
+    return structuredClone(estoque);
 }
 
 function limpaEstoque() {
