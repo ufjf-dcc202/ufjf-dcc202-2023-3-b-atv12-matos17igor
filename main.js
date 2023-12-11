@@ -27,17 +27,25 @@ function leFormulario(event) {
 
 function atualizaTela(){
     const estoque = getEstoque();
-    preencheLista(olJoao, estoque.joao);
-    preencheLista(olMaria, estoque.maria);
+    olJoao.innerHTML = "";
+    olMaria.innerHTML = "";
+    document.entrada.quantidade.value = 1;
+    document.entrada.fruta.value = "maca";
+    if(estoque.joao && estoque.joao.length > 0){
+        preencheLista(olJoao, estoque.joao);
+    }
+    if(estoque.maria && estoque.maria.length > 0){
+        preencheLista(olMaria, estoque.maria);
+    }
+    
 }
 
 function preencheLista(lista, estoqueDaPessoa){
-    const estoque = getEstoque();
     lista.innerHTML = "";
     for(let i = 0; i < estoqueDaPessoa.length; i++){
         const monte = estoqueDaPessoa[i];
         const li = document.createElement('li');
         li.textContent = `${monte.tipo}: ${monte.qtd}`;
-        lista.append(li);
+        lista.appendChild(li);
     }
 }
